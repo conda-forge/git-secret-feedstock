@@ -21,10 +21,13 @@ requirements:
     - toolchain
   run:
     - git
+    - gawk  # [not win]
     - m2-gnupg  # [win]
+    - m2-gawk   # [win]
 
 test:
   commands :
+    - bash -c 'git secret --version'
     - bash -c 'test $(git secret --version) = {{ version }}'
 
 about:
