@@ -1,6 +1,6 @@
 {% set name = "git-secret" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "a4672c2d5eca7b5c3b27388060609307b851edc7f7b653e1d21e3e0b328f43f4" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "dd9962935f242a94bb00af6a31171de0fdba357171a6c626efc2635751d52bc4" %}
 
 package:
   name: {{ name|lower }}
