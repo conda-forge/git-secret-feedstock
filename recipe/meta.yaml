@@ -12,16 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - make
     - posix  # [win]
-    - toolchain
+    - m2-gnupg  # [win]
+    - {{ compiler('c') }}
+  host:
   run:
     - git
-    - m2-gnupg  # [win]
 
 test:
   commands :
@@ -35,9 +36,9 @@ about:
   summary: 'git-secret stores your private data inside a git repo'
 
   description: |
-    git-secret is a bash tool to store your private data inside a git repo. 
-    It encrypts tracked files using gpg with the public keys of all the users 
-    that you trust. So everyone of them can decrypt these files using only 
+    git-secret is a bash tool to store your private data inside a git repo.
+    It encrypts tracked files using gpg with the public keys of all the users
+    that you trust. So everyone of them can decrypt these files using only
     their personal secret key.
   doc_url: https://git-secret.io
   dev_url: https://github.com/sobolevn/git-secret
