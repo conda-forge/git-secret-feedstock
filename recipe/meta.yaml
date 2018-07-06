@@ -20,7 +20,6 @@ requirements:
   build:
     - make
     - posix  # [win]
-    - toolchain
   run:
     - git
     - gawk  # [not win]
