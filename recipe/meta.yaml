@@ -1,6 +1,6 @@
 {% set name = "git-secret" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "a4672c2d5eca7b5c3b27388060609307b851edc7f7b653e1d21e3e0b328f43f4" %}
+{% set version = "0.2.3" %}
+{% set sha256 = "c821c25865ce7e13a67453debb6d60a8c1730102ecfc4c4b4c4858a02201ab26" %}
 
 package:
   name: {{ name|lower }}
@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/sobolevn/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - fix-version-number.patch
 
 build:
   number: 0
@@ -18,13 +20,15 @@ requirements:
   build:
     - make
     - posix  # [win]
-    - toolchain
   run:
     - git
+    - gawk  # [not win]
     - m2-gnupg  # [win]
+    - m2-gawk   # [win]
 
 test:
   commands :
+    - bash -c 'git secret --version'
     - bash -c 'test $(git secret --version) = {{ version }}'
 
 about:

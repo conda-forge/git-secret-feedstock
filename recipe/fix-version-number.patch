@@ -1,0 +1,11 @@
+diff --git a/src/version.sh b/src/version.sh
+index 3d1bb1f..f9ff567 100644
+--- a/src/version.sh
++++ b/src/version.sh
+@@ -1,4 +1,4 @@
+ #!/usr/bin/env bash
+ 
+ # shellcheck disable=2034
+-GITSECRET_VERSION='0.2.2'
++GITSECRET_VERSION='0.2.3'
+
