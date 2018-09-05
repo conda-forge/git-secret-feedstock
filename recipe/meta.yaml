@@ -14,7 +14,7 @@ source:
     - fix-version-number.patch
 
 build:
-  number: 0
+  number: 1000
 
 requirements:
   build:
