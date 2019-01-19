@@ -1,6 +1,5 @@
 {% set name = "git-secret" %}
 {% set version = "0.2.5" %}
-{% set sha256 = "" %}
 
 package:
   name: {{ name|lower }}
