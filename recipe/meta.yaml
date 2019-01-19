@@ -1,6 +1,6 @@
 {% set name = "git-secret" %}
 {% set version = "0.2.5" %}
-{% set sha256 = "02224b360ef560d1a41ae758d16ef2f2657af8424711d52443ca7ac01367ad29" %}
+{% set sha256 = "" %}
 
 package:
   name: {{ name|lower }}
@@ -9,9 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/sobolevn/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-  patches:
-    - fix-version-number.patch
+  sha256: 02224b360ef560d1a41ae758d16ef2f2657af8424711d52443ca7ac01367ad29
 
 build:
   number: 1000
