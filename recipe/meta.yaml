@@ -23,7 +23,7 @@ requirements:
     - m2-gawk   # [win]
 
 test:
-  requirements:
+  requires:
     - git
   commands :
     - bash -c 'git secret --version'
