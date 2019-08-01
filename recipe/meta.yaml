@@ -18,12 +18,13 @@ requirements:
     - make
     - posix  # [win]
   run:
-    - git
     - gawk  # [not win]
     - m2-gnupg  # [win]
     - m2-gawk   # [win]
 
 test:
+  requirements:
+    - git
   commands :
     - bash -c 'git secret --version'
     - bash -c 'test $(git secret --version) = {{ version }}'
