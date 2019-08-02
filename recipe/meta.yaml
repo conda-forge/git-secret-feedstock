@@ -26,8 +26,10 @@ requirements:
 
 test:
   commands :
-    - bash -c 'git secret --version'
-    - bash -c 'test $(git secret --version) = {{ version }}'
+    - which git-secret   # [not win]
+    - where git-secret    # [win]
+    - bash -c 'git secret --version'  # [not win]
+    - bash -c 'test $(git secret --version) = {{ version }}'   # [not win]
 
 about:
   home: https://git-secret.io
