@@ -12,7 +12,7 @@ source:
   sha256: 0069650d409488f49ccefcb56d8907ca72d9e360f249d2825eb411cd2228a0cc
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -50,3 +50,5 @@ extra:
   recipe-maintainers:
     - sodre
     - adbeda
+    - oblute
+    - rluria14
