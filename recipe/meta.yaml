@@ -1,5 +1,5 @@
 {% set name = "git-secret" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/sobolevn/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 07b32b096e5ff5b4818096b1858c1f69df4684bb0f256e620514cf88f44ded85
+  sha256: d8c19a5cbd174e95484a4233605985dd3b060a8a83d14d41c3bad1d534c6ab39
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
     - m2-gawk   # [win]
 
 test:
-  commands :
+  commands:
     - which git-secret   # [not win]
     - where git-secret    # [win]
     - bash -c 'git secret --version'  # [not win]
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'git-secret stores your private data inside a git repo'
+  summary: git-secret stores your private data inside a git repo
 
   description: |
     git-secret is a bash tool to store your private data inside a git repo. 
