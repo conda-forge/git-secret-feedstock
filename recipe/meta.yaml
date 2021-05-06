@@ -1,5 +1,5 @@
 {% set name = "git-secret" %}
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/sobolevn/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d8c19a5cbd174e95484a4233605985dd3b060a8a83d14d41c3bad1d534c6ab39
+  sha256: 83d16930c6e5d659800703ba9b5e1c73cd9f07619d954d26c23af2e36a59a4b2
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
